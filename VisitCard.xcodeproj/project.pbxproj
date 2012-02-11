@@ -1,0 +1,282 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD63AB5514E68E6000805732 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD63AB5414E68E6000805732 /* UIKit.framework */; };
+		CD63AB5714E68E6000805732 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD63AB5614E68E6000805732 /* Foundation.framework */; };
+		CD63AB5914E68E6000805732 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD63AB5814E68E6000805732 /* CoreGraphics.framework */; };
+		CD63AB5B14E68E6000805732 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD63AB5A14E68E6000805732 /* CoreData.framework */; };
+		CD63AB6114E68E6000805732 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD63AB5F14E68E6000805732 /* InfoPlist.strings */; };
+		CD63AB6314E68E6000805732 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD63AB6214E68E6000805732 /* main.m */; };
+		CD63AB6714E68E6000805732 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD63AB6614E68E6000805732 /* AppDelegate.m */; };
+		CD63AB6A14E68E6000805732 /* VisitCard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CD63AB6814E68E6000805732 /* VisitCard.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CD63AB5014E68E6000805732 /* VisitCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisitCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD63AB5414E68E6000805732 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CD63AB5614E68E6000805732 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CD63AB5814E68E6000805732 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CD63AB5A14E68E6000805732 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		CD63AB5E14E68E6000805732 /* VisitCard-Info.plist */ = {isa = PBXFileReference; path = "VisitCard-Info.plist"; sourceTree = "<group>"; };
+		CD63AB6014E68E6000805732 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CD63AB6214E68E6000805732 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CD63AB6414E68E6000805732 /* VisitCard-Prefix.pch */ = {isa = PBXFileReference; path = "VisitCard-Prefix.pch"; sourceTree = "<group>"; };
+		CD63AB6514E68E6000805732 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		CD63AB6614E68E6000805732 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CD63AB6914E68E6000805732 /* VisitCard.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VisitCard.xcdatamodel; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD63AB4D14E68E6000805732 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD63AB5514E68E6000805732 /* UIKit.framework in Frameworks */,
+				CD63AB5714E68E6000805732 /* Foundation.framework in Frameworks */,
+				CD63AB5914E68E6000805732 /* CoreGraphics.framework in Frameworks */,
+				CD63AB5B14E68E6000805732 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CD63AB4514E68E6000805732 = {
+			isa = PBXGroup;
+			children = (
+				CD63AB5C14E68E6000805732 /* VisitCard */,
+				CD63AB5314E68E6000805732 /* Frameworks */,
+				CD63AB5114E68E6000805732 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CD63AB5114E68E6000805732 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD63AB5014E68E6000805732 /* VisitCard.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD63AB5314E68E6000805732 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD63AB5414E68E6000805732 /* UIKit.framework */,
+				CD63AB5614E68E6000805732 /* Foundation.framework */,
+				CD63AB5814E68E6000805732 /* CoreGraphics.framework */,
+				CD63AB5A14E68E6000805732 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD63AB5C14E68E6000805732 /* VisitCard */ = {
+			isa = PBXGroup;
+			children = (
+				CD63AB6514E68E6000805732 /* AppDelegate.h */,
+				CD63AB6614E68E6000805732 /* AppDelegate.m */,
+				CD63AB6814E68E6000805732 /* VisitCard.xcdatamodeld */,
+				CD63AB5D14E68E6000805732 /* Supporting Files */,
+			);
+			path = VisitCard;
+			sourceTree = "<group>";
+		};
+		CD63AB5D14E68E6000805732 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CD63AB5E14E68E6000805732 /* VisitCard-Info.plist */,
+				CD63AB5F14E68E6000805732 /* InfoPlist.strings */,
+				CD63AB6214E68E6000805732 /* main.m */,
+				CD63AB6414E68E6000805732 /* VisitCard-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CD63AB4F14E68E6000805732 /* VisitCard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD63AB6D14E68E6000805732 /* Build configuration list for PBXNativeTarget "VisitCard" */;
+			buildPhases = (
+				CD63AB4C14E68E6000805732 /* Sources */,
+				CD63AB4D14E68E6000805732 /* Frameworks */,
+				CD63AB4E14E68E6000805732 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VisitCard;
+			productName = VisitCard;
+			productReference = CD63AB5014E68E6000805732 /* VisitCard.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD63AB4714E68E6000805732 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = CD63AB4A14E68E6000805732 /* Build configuration list for PBXProject "VisitCard" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CD63AB4514E68E6000805732;
+			productRefGroup = CD63AB5114E68E6000805732 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD63AB4F14E68E6000805732 /* VisitCard */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD63AB4E14E68E6000805732 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD63AB6114E68E6000805732 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD63AB4C14E68E6000805732 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD63AB6314E68E6000805732 /* main.m in Sources */,
+				CD63AB6714E68E6000805732 /* AppDelegate.m in Sources */,
+				CD63AB6A14E68E6000805732 /* VisitCard.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CD63AB5F14E68E6000805732 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD63AB6014E68E6000805732 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CD63AB6B14E68E6000805732 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CD63AB6C14E68E6000805732 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CD63AB6E14E68E6000805732 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VisitCard/VisitCard-Prefix.pch";
+				INFOPLIST_FILE = "VisitCard/VisitCard-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CD63AB6F14E68E6000805732 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VisitCard/VisitCard-Prefix.pch";
+				INFOPLIST_FILE = "VisitCard/VisitCard-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD63AB4A14E68E6000805732 /* Build configuration list for PBXProject "VisitCard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD63AB6B14E68E6000805732 /* Debug */,
+				CD63AB6C14E68E6000805732 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD63AB6D14E68E6000805732 /* Build configuration list for PBXNativeTarget "VisitCard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD63AB6E14E68E6000805732 /* Debug */,
+				CD63AB6F14E68E6000805732 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CD63AB6814E68E6000805732 /* VisitCard.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CD63AB6914E68E6000805732 /* VisitCard.xcdatamodel */,
+			);
+			currentVersion = CD63AB6914E68E6000805732 /* VisitCard.xcdatamodel */;
+			path = VisitCard.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CD63AB4714E68E6000805732 /* Project object */;
+}
