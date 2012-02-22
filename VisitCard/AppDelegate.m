@@ -3,10 +3,12 @@
 //  VisitCard
 //
 //  Created by Valentí on 11/02/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Biapum. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "MainPageViewController.h"
+#import "FiltersServices.h"
 
 @implementation AppDelegate
 
@@ -14,21 +16,35 @@
 @synthesize managedObjectContext = __managedObjectContext;
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
+@synthesize navContr,mainPageVC;
 
 - (void)dealloc
 {
+    [navContr release];
+    [mainPageVC release];
     [_window release];
     [__managedObjectContext release];
     [__managedObjectModel release];
     [__persistentStoreCoordinator release];
+    
     [super dealloc];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    [[FiltersServices instance] initArrays];
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.backgroundColor = [UIColor grayColor];
+    
+    mainPageVC = [[MainPageViewController alloc] init];
+    navContr= [[UINavigationController alloc]initWithRootViewController:mainPageVC];
+
+    
+    //show them
+    [self.window addSubview:navContr.view];
     [self.window makeKeyAndVisible];
     return YES;
 }
