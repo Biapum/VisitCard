@@ -3,7 +3,7 @@
 //  VisitCard
 //
 //  Created by Valentí on 11/02/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Biapum. All rights reserved.
 //
 
 #import "ResultPageViewController.h"
@@ -33,7 +33,7 @@
     [imageViewFront release];
     [imageFront release];
     [imageback release];
-    [filterPageVC release];
+    //[filterPageVC release];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -129,7 +129,7 @@
     [dic setValue:self.textFieldEmail.text forKey:@"email"];
     [dic setValue:self.textFieldWeb.text forKey:@"web"];
     [dic setValue:self.textFieldtwitter.text forKey:@"twitter"];
-    self.filterPageVC = [[FiltersPageViewController alloc]initWithNibName:@"FiltersPageViewController" bundle:nil dic:dic];
+    self.filterPageVC = [[[FiltersPageViewController alloc]initWithNibName:@"FiltersPageViewController" bundle:nil dic:dic] autorelease];
     [self.navigationController pushViewController:self.filterPageVC animated:YES];
     [dic release];
 }

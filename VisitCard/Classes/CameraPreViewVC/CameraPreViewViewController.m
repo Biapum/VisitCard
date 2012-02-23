@@ -10,7 +10,8 @@
 #import "OverlayPageViewController.h"
 
 @interface CameraPreViewViewController()
--(void)goToResult;
+- (void)goToResult;
+- (void)updateCounter:(NSTimer *)theTimer;
 @end
 
 @implementation CameraPreViewViewController
@@ -19,6 +20,7 @@
 @synthesize imageBack,imageFront;
 @synthesize imageBackScan,imageFrontScan;
 @synthesize labelScaningCard,buttonScan;
+@synthesize labelScaningCardValue;
 
 -(void)dealloc{
     [super dealloc];
@@ -32,6 +34,7 @@
     [imageFrontScan release];
     [imageBackScan release];
     [labelScaningCard release];
+    [labelScaningCardValue release];
     [buttonScan release];
 }
 
@@ -63,6 +66,11 @@
     self.overlayPageVCBack = [[OverlayPageViewController alloc] initWithNibName:@"OverlayPageViewController" bundle:nil text:@"Back"];
     self.overlayPageVCFront.delegate = self;
     self.overlayPageVCBack.delegate = self;
+    [NSTimer scheduledTimerWithTimeInterval:.022
+									 target:self
+								   selector:@selector(updateCounter:)
+								   userInfo:nil
+									repeats:YES];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -75,6 +83,8 @@
     [self.imageBackScan setHidden:YES];
     [self.labelScaningCard setHidden:YES];
     [self.buttonScan setEnabled:YES];
+    self.labelScaningCardValue.text = @"0";
+    [self.labelScaningCardValue setHidden:YES];
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -109,6 +119,9 @@
     [self.buttonScan setEnabled:NO];
     [resultPageVC setImageback:self.imageBack.image];
     [resultPageVC setImageFront:self.imageFront.image];
+    self.labelScaningCardValue.text = @"0";
+    [self.labelScaningCardValue setHidden:NO];
+    
     [self performSelectorInBackground:@selector(goToResult) withObject:nil];
 }
 
@@ -180,4 +193,13 @@
                          [viewLine setFrame:posFinal];
                      }];
 }
+
+
+- (void)updateCounter:(NSTimer *)theTimer {
+    if([self.labelScaningCardValue.text intValue] <100){
+        int value = [self.labelScaningCardValue.text intValue]+1;
+        self.labelScaningCardValue.text = [NSString stringWithFormat:@"%i",value];     
+    }
+}
+
 @end

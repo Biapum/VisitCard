@@ -3,7 +3,7 @@
 //  VisitCard
 //
 //  Created by Valentí on 13/02/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Biapum. All rights reserved.
 //
 
 #import "ContactEntity.h"
@@ -54,7 +54,7 @@
         {
             self.contactId = [self setValue:value forKey:aKey];
         }
-        if ([aKey isEqualToString:@"phone"])
+        if ([aKey isEqualToString:@"contactPhone"])
         {
             self.contactPhone = [self setValue:value forKey:aKey];
         }
@@ -74,10 +74,40 @@
 	}
 }
 
+
 - (NSString *)setValue:(NSString*)value forKey:(NSString*)key {
     if(![[NSString stringWithFormat:@"%@", value] isEqualToString:@"<null>"]) 
         return [NSString stringWithFormat:@"%@",value];
     else
         return @"";
 }
+
+- (void)encodeWithCoder:(NSCoder *)encoder
+{
+    //Encode properties, other class variables, etc
+    [encoder encodeObject:self.contactName forKey:@"name"];
+    [encoder encodeObject:self.contactId forKey:@"id"];
+    [encoder encodeObject:self.contactPhone forKey:@"contactPhone"];
+    [encoder encodeObject:self.contactEmail forKey:@"email"];
+    [encoder encodeObject:self.contactWeb forKey:@"web"];
+    [encoder encodeObject:self.contactTwitter forKey:@"twitter"];
+}
+
+- (id)initWithCoder:(NSCoder *)decoder
+{
+    self = [super init];
+    if( self != nil )
+    {
+        //decode properties, other class vars
+        self.contactName = [decoder decodeObjectForKey:@"name"];
+        self.contactId = [decoder decodeObjectForKey:@"id"];
+        self.contactPhone = [decoder decodeObjectForKey:@"contactPhone"];
+        self.contactEmail = [decoder decodeObjectForKey:@"email"];
+        self.contactWeb = [decoder decodeObjectForKey:@"web"];
+        self.contactTwitter = [decoder decodeObjectForKey:@"twitter"];
+    }
+    return self;
+}
+
+
 @end

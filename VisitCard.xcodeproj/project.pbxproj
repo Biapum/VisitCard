@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD34FC2C14F5B00200FFBBF7 /* ContactDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD34FC2A14F5B00200FFBBF7 /* ContactDetailsViewController.m */; };
+		CD34FC2D14F5B00200FFBBF7 /* ContactDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD34FC2B14F5B00200FFBBF7 /* ContactDetailsViewController.xib */; };
 		CD5759A814E997A8001C361C /* FiltersServices.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5759A714E997A8001C361C /* FiltersServices.m */; };
 		CD5759BC14E9C90B001C361C /* DataServices.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5759BB14E9C90B001C361C /* DataServices.m */; };
 		CD5759C414E9CAEB001C361C /* ContactEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5759C314E9CAEB001C361C /* ContactEntity.m */; };
@@ -47,6 +49,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD34FC2914F5B00200FFBBF7 /* ContactDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactDetailsViewController.h; path = Classes/ContactDetailsVC/ContactDetailsViewController.h; sourceTree = "<group>"; };
+		CD34FC2A14F5B00200FFBBF7 /* ContactDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContactDetailsViewController.m; path = Classes/ContactDetailsVC/ContactDetailsViewController.m; sourceTree = "<group>"; };
+		CD34FC2B14F5B00200FFBBF7 /* ContactDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ContactDetailsViewController.xib; path = Classes/ContactDetailsVC/ContactDetailsViewController.xib; sourceTree = "<group>"; };
 		CD5759A614E997A8001C361C /* FiltersServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FiltersServices.h; path = Classes/BLL/services/FilterServices/FiltersServices.h; sourceTree = "<group>"; };
 		CD5759A714E997A8001C361C /* FiltersServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FiltersServices.m; path = Classes/BLL/services/FilterServices/FiltersServices.m; sourceTree = "<group>"; };
 		CD5759BA14E9C90B001C361C /* DataServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataServices.h; path = Classes/BLL/services/DataServices/DataServices.h; sourceTree = "<group>"; };
@@ -116,6 +121,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD34FC2714F5AFC400FFBBF7 /* ContactDetailsVC */ = {
+			isa = PBXGroup;
+			children = (
+				CD34FC2914F5B00200FFBBF7 /* ContactDetailsViewController.h */,
+				CD34FC2A14F5B00200FFBBF7 /* ContactDetailsViewController.m */,
+				CD34FC2B14F5B00200FFBBF7 /* ContactDetailsViewController.xib */,
+			);
+			name = ContactDetailsVC;
+			sourceTree = "<group>";
+		};
 		CD5759A114E99720001C361C /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +139,7 @@
 				CD63ABA714E6DDEA00805732 /* ResultPageVC */,
 				CD6CE48614E8472E00D33FCF /* FiltersPageVC */,
 				CD63ABB714E71E2400805732 /* ListPageVC */,
+				CD34FC2714F5AFC400FFBBF7 /* ContactDetailsVC */,
 				CD63ABBD14E7243B00805732 /* MeVC */,
 			);
 			name = UI;
@@ -427,6 +443,7 @@
 				CD6CE48C14E8478800D33FCF /* FiltersPageViewController.xib in Resources */,
 				CD5759CA14E9DE6D001C361C /* CustomCell.xib in Resources */,
 				CD5759CB14E9DE6D001C361C /* CustomCell~ipad.xib in Resources */,
+				CD34FC2D14F5B00200FFBBF7 /* ContactDetailsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +468,7 @@
 				CD5759BC14E9C90B001C361C /* DataServices.m in Sources */,
 				CD5759C414E9CAEB001C361C /* ContactEntity.m in Sources */,
 				CD5759CC14E9DE6D001C361C /* CustomCell.m in Sources */,
+				CD34FC2C14F5B00200FFBBF7 /* ContactDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

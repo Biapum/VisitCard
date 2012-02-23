@@ -29,10 +29,11 @@
     UIImageView *imageBackScan;
     
     UILabel *labelScaningCard;
+    UILabel *labelScaningCardValue;
     UIButton *buttonScan;
 }
 
-- (void)setTesseractImage:(UIImage *)image;
+//- (void)setTesseractImage:(UIImage *)image;
 
 -(IBAction)goToCameraFront:(id)sender;
 -(IBAction)goToCameraBack:(id)sender;
@@ -52,5 +53,6 @@
 @property (nonatomic, retain) IBOutlet UIImageView *imageFrontScan;
 @property (nonatomic, retain) IBOutlet UIImageView *imageBackScan;
 @property (nonatomic, retain) IBOutlet UILabel *labelScaningCard;
+@property (nonatomic, retain) IBOutlet UILabel *labelScaningCardValue;
 @property (nonatomic, retain) IBOutlet UIButton *buttonScan;
 @end

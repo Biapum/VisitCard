@@ -3,13 +3,14 @@
 //  VisitCard
 //
 //  Created by Valentí on 11/02/12.
-//  Copyright (c) 2012 Biaoum. All rights reserved.
+//  Copyright (c) 2012 Biapum. All rights reserved.
 //
 
 #import "ListPageViewController.h"
 #import "DataServices.h"
 #import "CustomCell.h"
 #import "ContactEntity.h"
+#import "ContactDetailsViewController.h"
 
 @implementation ListPageViewController
 @synthesize myTableView,contactsArray;
@@ -110,7 +111,15 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	
+    ContactEntity *contact =[self.contactsArray objectAtIndex:indexPath.row];
+
+    ContactDetailsViewController *contactDetailVC = [[ContactDetailsViewController alloc] initWithNibName:@"ContactDetailsViewController" bundle:nil andContactId:@"proba"];
+    contactDetailVC.contactId = contact.contactId;
+    
+    [self.navigationController pushViewController:contactDetailVC animated:YES];
+	[[tableView cellForRowAtIndexPath:indexPath] setSelected:NO animated:YES];
+	[contactDetailVC release];
+
 }
 
 
