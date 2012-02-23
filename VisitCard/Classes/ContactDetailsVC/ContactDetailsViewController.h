@@ -13,10 +13,14 @@
 {
     NSString *contactId;
     UILabel *labelName;
+    UIImageView *contactCardFront;
+    UIImageView *contactCardBack;
     ContactEntity *contactEnt;
 }
 
 @property (nonatomic,retain) IBOutlet UILabel *labelName;
+@property (nonatomic,retain) IBOutlet UIImageView *contactCardFront;
+@property (nonatomic,retain) IBOutlet UIImageView *contactCardBack;
 @property (nonatomic,retain) NSString *contactId;
 @property (nonatomic,retain) ContactEntity *contactEnt;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil andContactId:(NSString *)contId;

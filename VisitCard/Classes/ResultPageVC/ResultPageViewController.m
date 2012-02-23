@@ -16,7 +16,7 @@
 @implementation ResultPageViewController
 @synthesize textFieldWeb,textFieldName,textFieldEmail,textFieldPhone,textFieldtwitter;
 @synthesize btHideKeypad;
-@synthesize imageback,imageFront;
+@synthesize imageBack,imageFront;
 @synthesize imageViewBack,imageViewFront;
 @synthesize filterPageVC;
 
@@ -32,7 +32,7 @@
     [imageViewBack release];
     [imageViewFront release];
     [imageFront release];
-    [imageback release];
+    [imageBack release];
     //[filterPageVC release];
 }
 
@@ -68,7 +68,7 @@
     [self.navigationController.navigationBar setTintColor:[UIColor blackColor]];
     self.title = @"Edit info";
     self.imageViewFront.image = imageFront;
-    self.imageViewBack.image = imageback;
+    self.imageViewBack.image = imageBack;
 
 }
 
@@ -129,6 +129,10 @@
     [dic setValue:self.textFieldEmail.text forKey:@"email"];
     [dic setValue:self.textFieldWeb.text forKey:@"web"];
     [dic setValue:self.textFieldtwitter.text forKey:@"twitter"];
+    if(imageFront)
+        [dic setObject:self.imageFront forKey:@"cardFront"];
+    if(imageBack)
+        [dic setObject:self.imageBack forKey:@"cardBack"];
     self.filterPageVC = [[[FiltersPageViewController alloc]initWithNibName:@"FiltersPageViewController" bundle:nil dic:dic] autorelease];
     [self.navigationController pushViewController:self.filterPageVC animated:YES];
     [dic release];

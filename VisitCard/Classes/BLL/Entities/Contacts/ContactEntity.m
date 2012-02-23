@@ -70,6 +70,16 @@
         {
             self.contactTwitter = [self setValue:value forKey:aKey];
         }
+        if ([aKey isEqualToString:@"cardFront"])
+        {
+            UIImage *img = (UIImage*)[feed objectForKey:aKey];
+            self.contactCardFront = [self setImage:img forKey:aKey];
+        }
+        if ([aKey isEqualToString:@"cardBack"])
+        {
+            UIImage *img = (UIImage*)[feed objectForKey:aKey];
+            self.contactCardBack = [self setImage:img forKey:aKey];
+        }
         //etc..
 	}
 }
@@ -82,6 +92,13 @@
         return @"";
 }
 
+- (UIImage *)setImage:(UIImage*)image forKey:(NSString*)key {
+    if(image) 
+        return image;
+    else
+        return nil;
+}
+
 - (void)encodeWithCoder:(NSCoder *)encoder
 {
     //Encode properties, other class variables, etc
@@ -91,6 +108,8 @@
     [encoder encodeObject:self.contactEmail forKey:@"email"];
     [encoder encodeObject:self.contactWeb forKey:@"web"];
     [encoder encodeObject:self.contactTwitter forKey:@"twitter"];
+    [encoder encodeObject:self.contactCardFront forKey:@"cardFront"];
+    [encoder encodeObject:self.contactCardBack forKey:@"cardBack"];
 }
 
 - (id)initWithCoder:(NSCoder *)decoder
@@ -105,6 +124,8 @@
         self.contactEmail = [decoder decodeObjectForKey:@"email"];
         self.contactWeb = [decoder decodeObjectForKey:@"web"];
         self.contactTwitter = [decoder decodeObjectForKey:@"twitter"];
+        self.contactCardFront = [decoder decodeObjectForKey:@"cardFront"];
+        self.contactCardBack = [decoder decodeObjectForKey:@"cardBack"];
     }
     return self;
 }

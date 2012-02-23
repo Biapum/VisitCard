@@ -41,6 +41,6 @@
 - (void)parseContact:(NSMutableDictionary *)feed;
 
 - (NSString *)setValue:(NSString*)value forKey:(NSString*)key;
-
+- (UIImage *)setImage:(UIImage*)image forKey:(NSString*)key;
 
 @end

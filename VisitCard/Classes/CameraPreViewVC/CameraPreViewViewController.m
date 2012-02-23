@@ -117,7 +117,7 @@
     [self slideView:self.imageBackScan withDistance:-200];
     [self.labelScaningCard setHidden:NO];
     [self.buttonScan setEnabled:NO];
-    [resultPageVC setImageback:self.imageBack.image];
+    [resultPageVC setImageBack:self.imageBack.image];
     [resultPageVC setImageFront:self.imageFront.image];
     self.labelScaningCardValue.text = @"0";
     [self.labelScaningCardValue setHidden:NO];

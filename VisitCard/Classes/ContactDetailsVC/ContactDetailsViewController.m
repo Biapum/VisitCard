@@ -13,12 +13,14 @@
 @synthesize labelName;
 @synthesize contactId;
 @synthesize contactEnt;
+@synthesize contactCardFront,contactCardBack;
 
 -(void)dealloc{
     [super dealloc];
     [contactId release];
     [labelName release];
-    [contactEnt release];
+    [contactCardBack release];
+    [contactCardFront release];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil andContactId:(NSString *)contId{
@@ -44,7 +46,9 @@
     [super viewDidLoad];
     self.contactEnt = [[DataServices instance] getContact:contactId]; 
 
-    self.labelName.text = contactEnt.contactName;//contactId;
+    self.labelName.text = contactEnt.contactName;
+    self.contactCardFront.image = contactEnt.contactCardFront;
+    self.contactCardBack.image = contactEnt.contactCardBack;
     // Do any additional setup after loading the view from its nib.
 }
 
