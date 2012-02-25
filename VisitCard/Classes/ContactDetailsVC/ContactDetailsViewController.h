@@ -22,6 +22,12 @@
     
     UIImageView *contactCardFront;
     UIImageView *contactCardBack;
+
+    UIImageView *imageEdit0;
+    UIImageView *imageEdit1;
+    UIImageView *imageEdit2;
+    UIImageView *imageEdit3;
+    UIImageView *imageEdit4;
     ContactEntity *contactEnt;
     BOOL isEditingMode;
 }
@@ -38,5 +44,10 @@
 @property (nonatomic,retain) NSString               *contactId;
 @property (nonatomic,retain) ContactEntity          *contactEnt;
 
+@property (nonatomic,retain) IBOutlet UIImageView   *imageEdit0;
+@property (nonatomic,retain) IBOutlet UIImageView   *imageEdit1;
+@property (nonatomic,retain) IBOutlet UIImageView   *imageEdit2;
+@property (nonatomic,retain) IBOutlet UIImageView   *imageEdit3;
+@property (nonatomic,retain) IBOutlet UIImageView   *imageEdit4;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil andContactId:(NSString *)contId;
 @end

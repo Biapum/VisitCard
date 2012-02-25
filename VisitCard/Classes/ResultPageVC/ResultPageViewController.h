@@ -24,6 +24,9 @@
     UIImageView *imageViewFront;
     UIImageView *imageViewBack;
     FiltersPageViewController *filterPageVC;
+    
+    //Loading
+    UIActivityIndicatorView	*progress;
 }
 
 @property (nonatomic,retain) IBOutlet UITextField *textFieldName;
@@ -39,6 +42,8 @@
 @property (nonatomic,retain) IBOutlet UIImageView *imageViewFront;
 @property (nonatomic,retain) IBOutlet UIImageView *imageViewBack;
 @property (nonatomic,retain) FiltersPageViewController *filterPageVC;
+
+@property (nonatomic, retain) IBOutlet UIActivityIndicatorView *progress;
 
 - (IBAction)hideKeypadButtonPressed;
 - (IBAction)goToFilters:(id)sender;

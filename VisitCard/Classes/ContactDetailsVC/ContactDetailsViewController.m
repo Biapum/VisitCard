@@ -1,4 +1,4 @@
-//
+    //
 //  ContactDetailsViewController.m
 //  VisitCard
 //
@@ -23,6 +23,7 @@
 @synthesize contactId;
 @synthesize contactEnt;
 @synthesize contactCardFront,contactCardBack;
+@synthesize imageEdit0,imageEdit1,imageEdit2,imageEdit3,imageEdit4;
 
 -(void)dealloc{
     [super dealloc];
@@ -35,6 +36,11 @@
     [labelTwitter release];
     [contactCardBack release];
     [contactCardFront release];
+    [imageEdit0 release];
+    [imageEdit1 release];
+    [imageEdit2 release];
+    [imageEdit3 release];
+    [imageEdit4 release];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil andContactId:(NSString *)contId{
@@ -80,6 +86,7 @@
 }
 
 -(void)initImages{
+    //NSLog(@"NSDATAfront es: %@",contactEnt.contactCardFrontData);
     self.contactCardFront.image = [UIImage imageWithData:contactEnt.contactCardFrontData];
     self.contactCardBack.image = [UIImage imageWithData:contactEnt.contactCardBackData];
 }
@@ -116,11 +123,21 @@
         [self canEditButtons:NO];
         isEditingMode=NO;
         [self.buttonEdit setTitle:@"Edit"];
+        [self.imageEdit0 setHidden:YES];
+        [self.imageEdit1 setHidden:YES];
+        [self.imageEdit2 setHidden:YES];
+        [self.imageEdit3 setHidden:YES];
+        [self.imageEdit4 setHidden:YES];
     }
     else{
         [self canEditButtons:YES];        
         isEditingMode=YES;
         [self.buttonEdit setTitle:@"Done"];
+        [self.imageEdit0 setHidden:NO];
+        [self.imageEdit1 setHidden:NO];
+        [self.imageEdit2 setHidden:NO];
+        [self.imageEdit3 setHidden:NO];
+        [self.imageEdit4 setHidden:NO];
     }
 }
 

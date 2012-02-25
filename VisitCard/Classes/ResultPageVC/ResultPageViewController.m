@@ -11,6 +11,7 @@
 
 @interface ResultPageViewController()
 - (void)hideKeypad;
+- (void)goToToNextScreen;
 @end
 
 @implementation ResultPageViewController
@@ -19,6 +20,7 @@
 @synthesize imageBack,imageFront;
 @synthesize imageViewBack,imageViewFront;
 @synthesize filterPageVC;
+@synthesize progress;
 
 -(void)dealloc{
     [super dealloc];
@@ -33,7 +35,8 @@
     [imageViewFront release];
     [imageFront release];
     [imageBack release];
-    //[filterPageVC release];
+    
+    [progress release];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -69,7 +72,7 @@
     self.title = @"Edit info";
     self.imageViewFront.image = imageFront;
     self.imageViewBack.image = imageBack;
-
+    [self.progress setHidden:YES];
 }
 
 - (void)viewDidUnload
@@ -121,8 +124,12 @@
 
 - (IBAction)goToFilters:(id)sender{
 
+    [self.progress setHidden:NO];
 
+    [self performSelectorInBackground:@selector(goToToNextScreen) withObject:nil];
+}
 
+-(void)goToToNextScreen{
     NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
     [dic setValue:self.textFieldName.text forKey:@"name"];
     [dic setValue:self.textFieldPhone.text forKey:@"phone"];
@@ -138,6 +145,7 @@
     self.filterPageVC = [[[FiltersPageViewController alloc]initWithNibName:@"FiltersPageViewController" bundle:nil dic:dic] autorelease];
     [self.navigationController pushViewController:self.filterPageVC animated:YES];
     [dic release];
+
 }
 
 @end

@@ -10,11 +10,14 @@
 #import "OverlayPageViewController.h"
 #import "ResultPageViewController.h"
 
+@class MBProgressHUD;
+
+namespace tesseract {
+    class TessBaseAPI;
+};
 
 @interface CameraPreViewViewController : UIViewController<UIImagePickerControllerDelegate,OverlayPageViewControllerDelegate>
-{
-    uint32_t *pixels;
-    
+{    
     OverlayPageViewController *overlayPageVCFront; 
     OverlayPageViewController *overlayPageVCBack; 
 
@@ -31,9 +34,17 @@
     UILabel *labelScaningCard;
     UILabel *labelScaningCardValue;
     UIButton *buttonScan;
-}
+    
+    //Tesseract
+    tesseract::TessBaseAPI *tesseract;
+    uint32_t *pixels;
+    
+    MBProgressHUD *progressHud;
 
-//- (void)setTesseractImage:(UIImage *)image;
+    //Loading
+    UIActivityIndicatorView	*progress;
+
+}
 
 -(IBAction)goToCameraFront:(id)sender;
 -(IBAction)goToCameraBack:(id)sender;
@@ -55,4 +66,12 @@
 @property (nonatomic, retain) IBOutlet UILabel *labelScaningCard;
 @property (nonatomic, retain) IBOutlet UILabel *labelScaningCardValue;
 @property (nonatomic, retain) IBOutlet UIButton *buttonScan;
+
+//Tesseract
+- (void)setTesseractImage:(UIImage *)image;
+
+@property (nonatomic, strong) MBProgressHUD *progressHud;
+@property (nonatomic, retain) IBOutlet UIActivityIndicatorView *progress;
+
+
 @end
