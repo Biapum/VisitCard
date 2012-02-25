@@ -129,10 +129,12 @@
     [dic setValue:self.textFieldEmail.text forKey:@"email"];
     [dic setValue:self.textFieldWeb.text forKey:@"web"];
     [dic setValue:self.textFieldtwitter.text forKey:@"twitter"];
+    
     if(imageFront)
-        [dic setObject:self.imageFront forKey:@"cardFront"];
+        [dic setObject:UIImagePNGRepresentation(self.imageFront) forKey:@"cardFrontData"];
     if(imageBack)
-        [dic setObject:self.imageBack forKey:@"cardBack"];
+        [dic setObject:UIImagePNGRepresentation(self.imageBack) forKey:@"cardBackData"];
+    
     self.filterPageVC = [[[FiltersPageViewController alloc]initWithNibName:@"FiltersPageViewController" bundle:nil dic:dic] autorelease];
     [self.navigationController pushViewController:self.filterPageVC animated:YES];
     [dic release];

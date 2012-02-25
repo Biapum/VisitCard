@@ -26,6 +26,7 @@
 @synthesize myPickerView;
 @synthesize textFieldType,textFieldEvent,textFieldProfession;
 @synthesize labelName;
+
 -(void)dealloc{
     [super dealloc];
     [contactNew release];

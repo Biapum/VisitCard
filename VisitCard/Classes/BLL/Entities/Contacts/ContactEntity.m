@@ -11,6 +11,7 @@
 @implementation ContactEntity
 @synthesize contactId,contactName,contactPhone,contactEmail,contactWeb;
 @synthesize contactTwitter,contactComent,contactCardFront,contactCardBack;
+@synthesize contactCardBackData,contactCardFrontData;
 @synthesize contactType,contactEvent,contactProfession;
 
 -(void)dealloc{
@@ -24,6 +25,8 @@
     [contactComent release];
     [contactCardFront release];
     [contactCardBack release];
+    [contactCardFrontData release];
+    [contactCardBackData release];
     [contactType release];
     [contactEvent release];
     [contactProfession release];
@@ -80,6 +83,16 @@
             UIImage *img = (UIImage*)[feed objectForKey:aKey];
             self.contactCardBack = [self setImage:img forKey:aKey];
         }
+        if ([aKey isEqualToString:@"cardFrontData"])
+        {
+            NSData *data = (NSData*)[feed objectForKey:aKey];
+            self.contactCardFrontData = [self setData:data forKey:aKey];
+        }
+        if ([aKey isEqualToString:@"cardBackData"])
+        {
+            NSData *data = (NSData*)[feed objectForKey:aKey];
+            self.contactCardBackData = [self setData:data forKey:aKey];
+        }
         //etc..
 	}
 }
@@ -99,6 +112,13 @@
         return nil;
 }
 
+- (NSData *)setData:(NSData*)data forKey:(NSString*)key {
+    if(data) 
+        return data;
+    else
+        return nil;
+}
+
 - (void)encodeWithCoder:(NSCoder *)encoder
 {
     //Encode properties, other class variables, etc
@@ -110,7 +130,10 @@
     [encoder encodeObject:self.contactTwitter forKey:@"twitter"];
     [encoder encodeObject:self.contactCardFront forKey:@"cardFront"];
     [encoder encodeObject:self.contactCardBack forKey:@"cardBack"];
+    [encoder encodeObject:self.contactCardFrontData forKey:@"cardFrontData"];
+    [encoder encodeObject:self.contactCardBackData forKey:@"cardBackData"];
 }
+
 
 - (id)initWithCoder:(NSCoder *)decoder
 {
@@ -126,6 +149,8 @@
         self.contactTwitter = [decoder decodeObjectForKey:@"twitter"];
         self.contactCardFront = [decoder decodeObjectForKey:@"cardFront"];
         self.contactCardBack = [decoder decodeObjectForKey:@"cardBack"];
+        self.contactCardFrontData = [decoder decodeObjectForKey:@"cardFrontData"];
+        self.contactCardBackData = [decoder decodeObjectForKey:@"cardBackData"];
     }
     return self;
 }

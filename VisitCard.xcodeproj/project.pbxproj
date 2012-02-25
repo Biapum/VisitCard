@@ -46,6 +46,19 @@
 		CD63ABC414E7264200805732 /* targetaBack.png in Resources */ = {isa = PBXBuildFile; fileRef = CD63ABC314E7264200805732 /* targetaBack.png */; };
 		CD6CE48B14E8478800D33FCF /* FiltersPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6CE48914E8478800D33FCF /* FiltersPageViewController.m */; };
 		CD6CE48C14E8478800D33FCF /* FiltersPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD6CE48A14E8478800D33FCF /* FiltersPageViewController.xib */; };
+		CD93E9BA14F8510500D82FF5 /* buttonWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = CD93E9B914F8510500D82FF5 /* buttonWhite.png */; };
+		CD93E9C114F859DA00D82FF5 /* buttonTwitter.png in Resources */ = {isa = PBXBuildFile; fileRef = CD93E9BC14F859DA00D82FF5 /* buttonTwitter.png */; };
+		CD93E9C214F859DA00D82FF5 /* buttonWeb.png in Resources */ = {isa = PBXBuildFile; fileRef = CD93E9BD14F859DA00D82FF5 /* buttonWeb.png */; };
+		CD93E9C314F859DA00D82FF5 /* buttonMail.png in Resources */ = {isa = PBXBuildFile; fileRef = CD93E9BE14F859DA00D82FF5 /* buttonMail.png */; };
+		CD93E9C414F859DA00D82FF5 /* buttonPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = CD93E9BF14F859DA00D82FF5 /* buttonPhone.png */; };
+		CD93E9C514F859DA00D82FF5 /* buttonWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = CD93E9C014F859DA00D82FF5 /* buttonWhite.png */; };
+		CD93E9CB14F86FD800D82FF5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD93E9CA14F86FD800D82FF5 /* Default@2x.png */; };
+		CD93E9D314F8715500D82FF5 /* PhotoBack.png in Resources */ = {isa = PBXBuildFile; fileRef = CD93E9CD14F8715400D82FF5 /* PhotoBack.png */; };
+		CD93E9D414F8715500D82FF5 /* PhotoPhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = CD93E9CE14F8715400D82FF5 /* PhotoPhoto.png */; };
+		CD93E9D514F8715500D82FF5 /* PhotoCancel.png in Resources */ = {isa = PBXBuildFile; fileRef = CD93E9CF14F8715400D82FF5 /* PhotoCancel.png */; };
+		CD93E9D614F8715500D82FF5 /* PhotoCancel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD93E9D014F8715400D82FF5 /* PhotoCancel@2x.png */; };
+		CD93E9D714F8715500D82FF5 /* PhotoPhoto@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD93E9D114F8715400D82FF5 /* PhotoPhoto@2x.png */; };
+		CD93E9D814F8715500D82FF5 /* PhotoBack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD93E9D214F8715400D82FF5 /* PhotoBack@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +117,19 @@
 		CD6CE48814E8478800D33FCF /* FiltersPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FiltersPageViewController.h; path = Classes/FiltersVC/FiltersPageViewController.h; sourceTree = "<group>"; };
 		CD6CE48914E8478800D33FCF /* FiltersPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FiltersPageViewController.m; path = Classes/FiltersVC/FiltersPageViewController.m; sourceTree = "<group>"; };
 		CD6CE48A14E8478800D33FCF /* FiltersPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FiltersPageViewController.xib; path = Classes/FiltersVC/FiltersPageViewController.xib; sourceTree = "<group>"; };
+		CD93E9B914F8510500D82FF5 /* buttonWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonWhite.png; path = Resources/images/DemoImages/buttonWhite.png; sourceTree = "<group>"; };
+		CD93E9BC14F859DA00D82FF5 /* buttonTwitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonTwitter.png; path = ../../../VisitCard/VisitCard/Resources/images/DemoImages/buttonTwitter.png; sourceTree = "<group>"; };
+		CD93E9BD14F859DA00D82FF5 /* buttonWeb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonWeb.png; path = ../../../VisitCard/VisitCard/Resources/images/DemoImages/buttonWeb.png; sourceTree = "<group>"; };
+		CD93E9BE14F859DA00D82FF5 /* buttonMail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonMail.png; path = ../../../VisitCard/VisitCard/Resources/images/DemoImages/buttonMail.png; sourceTree = "<group>"; };
+		CD93E9BF14F859DA00D82FF5 /* buttonPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonPhone.png; path = ../../../VisitCard/VisitCard/Resources/images/DemoImages/buttonPhone.png; sourceTree = "<group>"; };
+		CD93E9C014F859DA00D82FF5 /* buttonWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonWhite.png; path = ../../../VisitCard/VisitCard/Resources/images/DemoImages/buttonWhite.png; sourceTree = "<group>"; };
+		CD93E9CA14F86FD800D82FF5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/images/DemoImages/Default@2x.png"; sourceTree = "<group>"; };
+		CD93E9CD14F8715400D82FF5 /* PhotoBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PhotoBack.png; path = Resources/images/DemoImages/camera/PhotoBack.png; sourceTree = "<group>"; };
+		CD93E9CE14F8715400D82FF5 /* PhotoPhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PhotoPhoto.png; path = Resources/images/DemoImages/camera/PhotoPhoto.png; sourceTree = "<group>"; };
+		CD93E9CF14F8715400D82FF5 /* PhotoCancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PhotoCancel.png; path = Resources/images/DemoImages/camera/PhotoCancel.png; sourceTree = "<group>"; };
+		CD93E9D014F8715400D82FF5 /* PhotoCancel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "PhotoCancel@2x.png"; path = "Resources/images/DemoImages/camera/PhotoCancel@2x.png"; sourceTree = "<group>"; };
+		CD93E9D114F8715400D82FF5 /* PhotoPhoto@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "PhotoPhoto@2x.png"; path = "Resources/images/DemoImages/camera/PhotoPhoto@2x.png"; sourceTree = "<group>"; };
+		CD93E9D214F8715400D82FF5 /* PhotoBack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "PhotoBack@2x.png"; path = "Resources/images/DemoImages/camera/PhotoBack@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -320,8 +346,16 @@
 		CD63AB9C14E6C44300805732 /* demoImages */ = {
 			isa = PBXGroup;
 			children = (
+				CD93E9CC14F8714200D82FF5 /* Camera */,
+				CD93E9BC14F859DA00D82FF5 /* buttonTwitter.png */,
+				CD93E9BD14F859DA00D82FF5 /* buttonWeb.png */,
+				CD93E9BE14F859DA00D82FF5 /* buttonMail.png */,
+				CD93E9BF14F859DA00D82FF5 /* buttonPhone.png */,
+				CD93E9C014F859DA00D82FF5 /* buttonWhite.png */,
+				CD93E9B914F8510500D82FF5 /* buttonWhite.png */,
 				CD63ABC314E7264200805732 /* targetaBack.png */,
 				CD63ABB114E71AA500805732 /* Default.png */,
+				CD93E9CA14F86FD800D82FF5 /* Default@2x.png */,
 				CD63ABB214E71AA500805732 /* icon.png */,
 				CD63ABB314E71AA500805732 /* icon~ipad.png */,
 				CD63AB9D14E6C47F00805732 /* nobackImage.png */,
@@ -372,6 +406,19 @@
 				CD6CE48A14E8478800D33FCF /* FiltersPageViewController.xib */,
 			);
 			name = FiltersPageVC;
+			sourceTree = "<group>";
+		};
+		CD93E9CC14F8714200D82FF5 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				CD93E9CD14F8715400D82FF5 /* PhotoBack.png */,
+				CD93E9CE14F8715400D82FF5 /* PhotoPhoto.png */,
+				CD93E9CF14F8715400D82FF5 /* PhotoCancel.png */,
+				CD93E9D014F8715400D82FF5 /* PhotoCancel@2x.png */,
+				CD93E9D114F8715400D82FF5 /* PhotoPhoto@2x.png */,
+				CD93E9D214F8715400D82FF5 /* PhotoBack@2x.png */,
+			);
+			name = Camera;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -444,6 +491,19 @@
 				CD5759CA14E9DE6D001C361C /* CustomCell.xib in Resources */,
 				CD5759CB14E9DE6D001C361C /* CustomCell~ipad.xib in Resources */,
 				CD34FC2D14F5B00200FFBBF7 /* ContactDetailsViewController.xib in Resources */,
+				CD93E9BA14F8510500D82FF5 /* buttonWhite.png in Resources */,
+				CD93E9C114F859DA00D82FF5 /* buttonTwitter.png in Resources */,
+				CD93E9C214F859DA00D82FF5 /* buttonWeb.png in Resources */,
+				CD93E9C314F859DA00D82FF5 /* buttonMail.png in Resources */,
+				CD93E9C414F859DA00D82FF5 /* buttonPhone.png in Resources */,
+				CD93E9C514F859DA00D82FF5 /* buttonWhite.png in Resources */,
+				CD93E9CB14F86FD800D82FF5 /* Default@2x.png in Resources */,
+				CD93E9D314F8715500D82FF5 /* PhotoBack.png in Resources */,
+				CD93E9D414F8715500D82FF5 /* PhotoPhoto.png in Resources */,
+				CD93E9D514F8715500D82FF5 /* PhotoCancel.png in Resources */,
+				CD93E9D614F8715500D82FF5 /* PhotoCancel@2x.png in Resources */,
+				CD93E9D714F8715500D82FF5 /* PhotoPhoto@2x.png in Resources */,
+				CD93E9D814F8715500D82FF5 /* PhotoBack@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

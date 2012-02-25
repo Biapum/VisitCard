@@ -33,7 +33,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
+    [NSThread sleepForTimeInterval:1];
     [[FiltersServices instance] initArrays];
     [[DataServices instance] loadData];
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
