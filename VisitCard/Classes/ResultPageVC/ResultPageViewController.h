@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "FiltersPageViewController.h"
+#import "StepView.h"
 
 @interface ResultPageViewController : UIViewController <UITextFieldDelegate>
 {
@@ -27,6 +28,9 @@
     
     //Loading
     UIActivityIndicatorView	*progress;
+    
+    //Step
+    StepView *stepView;
 }
 
 @property (nonatomic,retain) IBOutlet UITextField *textFieldName;
@@ -44,6 +48,9 @@
 @property (nonatomic,retain) FiltersPageViewController *filterPageVC;
 
 @property (nonatomic, retain) IBOutlet UIActivityIndicatorView *progress;
+
+//Step
+@property (nonatomic,retain) StepView *stepView;
 
 - (IBAction)hideKeypadButtonPressed;
 - (IBAction)goToFilters:(id)sender;

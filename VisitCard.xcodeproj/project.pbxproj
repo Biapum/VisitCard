@@ -53,6 +53,8 @@
 		CD7294C814F90BF3001A7977 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = CD7294C714F90BF3001A7977 /* tessdata */; };
 		CD7294D714F914D6001A7977 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7294D614F914D6001A7977 /* Utils.m */; };
 		CD7294DD14F93B26001A7977 /* buttonEdit.png in Resources */ = {isa = PBXBuildFile; fileRef = CD7294DC14F93B26001A7977 /* buttonEdit.png */; };
+		CD7294E114F999A0001A7977 /* StepView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7294E014F999A0001A7977 /* StepView.m */; };
+		CD7294E414F99A40001A7977 /* StepView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD7294E314F99A3F001A7977 /* StepView.xib */; };
 		CD93E9BA14F8510500D82FF5 /* buttonWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = CD93E9B914F8510500D82FF5 /* buttonWhite.png */; };
 		CD93E9CB14F86FD800D82FF5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD93E9CA14F86FD800D82FF5 /* Default@2x.png */; };
 		CD93E9D314F8715500D82FF5 /* PhotoBack.png in Resources */ = {isa = PBXBuildFile; fileRef = CD93E9CD14F8715400D82FF5 /* PhotoBack.png */; };
@@ -173,6 +175,9 @@
 		CD7294D514F914D6001A7977 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = Classes/BLL/Utils/Utils.h; sourceTree = "<group>"; };
 		CD7294D614F914D6001A7977 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utils.m; path = Classes/BLL/Utils/Utils.m; sourceTree = "<group>"; };
 		CD7294DC14F93B26001A7977 /* buttonEdit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonEdit.png; path = Resources/images/DemoImages/buttonEdit.png; sourceTree = "<group>"; };
+		CD7294DF14F999A0001A7977 /* StepView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StepView.h; path = libs/step/StepView.h; sourceTree = "<group>"; };
+		CD7294E014F999A0001A7977 /* StepView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StepView.m; path = libs/step/StepView.m; sourceTree = "<group>"; };
+		CD7294E314F99A3F001A7977 /* StepView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StepView.xib; path = libs/step/StepView.xib; sourceTree = "<group>"; };
 		CD93E9B914F8510500D82FF5 /* buttonWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonWhite.png; path = Resources/images/DemoImages/buttonWhite.png; sourceTree = "<group>"; };
 		CD93E9CA14F86FD800D82FF5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/images/DemoImages/Default@2x.png"; sourceTree = "<group>"; };
 		CD93E9CD14F8715400D82FF5 /* PhotoBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PhotoBack.png; path = Resources/images/DemoImages/camera/PhotoBack.png; sourceTree = "<group>"; };
@@ -460,6 +465,7 @@
 		CD69E34014F8EFF500716809 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				CD7294DE14F9996C001A7977 /* step */,
 				CD69E37414F8F07600716809 /* MBProgressHUD */,
 				CD69E34214F8F00600716809 /* Tesseract */,
 			);
@@ -579,6 +585,16 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
+		CD7294DE14F9996C001A7977 /* step */ = {
+			isa = PBXGroup;
+			children = (
+				CD7294DF14F999A0001A7977 /* StepView.h */,
+				CD7294E014F999A0001A7977 /* StepView.m */,
+				CD7294E314F99A3F001A7977 /* StepView.xib */,
+			);
+			name = step;
+			sourceTree = "<group>";
+		};
 		CD93E9CC14F8714200D82FF5 /* Camera */ = {
 			isa = PBXGroup;
 			children = (
@@ -678,6 +694,7 @@
 				CD69E37D14F8F63200716809 /* cardtext.png in Resources */,
 				CD7294C814F90BF3001A7977 /* tessdata in Resources */,
 				CD7294DD14F93B26001A7977 /* buttonEdit.png in Resources */,
+				CD7294E414F99A40001A7977 /* StepView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -705,6 +722,7 @@
 				CD34FC2C14F5B00200FFBBF7 /* ContactDetailsViewController.m in Sources */,
 				CD69E37714F8F07600716809 /* MBProgressHUD.m in Sources */,
 				CD7294D714F914D6001A7977 /* Utils.m in Sources */,
+				CD7294E114F999A0001A7977 /* StepView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

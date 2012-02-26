@@ -26,6 +26,7 @@
 @synthesize myPickerView;
 @synthesize textFieldType,textFieldEvent,textFieldProfession;
 @synthesize labelName;
+@synthesize stepView;
 
 -(void)dealloc{
     [super dealloc];
@@ -39,6 +40,7 @@
     [textFieldEvent release];
     [textFieldProfession release];
     [labelName release];
+    [stepView release];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil dic:(NSMutableDictionary*)dic_
@@ -74,7 +76,8 @@
     NSLog(@"arrayPicker %@",self.arrayType);
     [self initPicker];
 
-    // Do any additional setup after loading the view from its nib.
+    [self.stepView = [StepView alloc]initWithFrame:CGRectMake(0, 0, 320, 20)];
+    [self.stepView initView:self.view andStep:3];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -88,6 +91,9 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+    self.textFieldEvent =nil;
+    self.textFieldProfession=nil;
+    self.textFieldType =nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

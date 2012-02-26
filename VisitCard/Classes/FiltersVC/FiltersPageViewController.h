@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ContactEntity.h"
+#import "StepView.h"
 
 typedef enum {
     pickerTypeType      = 0,
@@ -32,6 +33,9 @@ typedef enum {
     
 	IBOutlet UIPickerView *myPickerView;
     UILabel *labelName;
+    
+    //Step
+    StepView *stepView;
 }
 @property (nonatomic, retain) ContactEntity *contactNew;
 @property (nonatomic, retain) IBOutlet UIPickerView *myPickerView;
@@ -46,6 +50,10 @@ typedef enum {
 @property (nonatomic, retain) IBOutlet UITextField *textFieldProfession;
 @property (nonatomic, retain) IBOutlet UITextField *textFieldEvent;
 @property (nonatomic, retain) IBOutlet UILabel *labelName;
+
+//Step
+@property (nonatomic,retain) StepView *stepView;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil dic:(NSMutableDictionary*)dic_;
 -(IBAction)pushType:(id)sender;
 -(IBAction)pushEvent:(id)sender;

@@ -34,6 +34,8 @@
 
 @synthesize progressHud,progress;
 
+@synthesize stepView;
+
 -(void)dealloc{
     [super dealloc];
     [imagePicker release];
@@ -52,6 +54,9 @@
     //Tessract
     delete tesseract;
     tesseract = nil;
+
+    //Step
+    [stepView release];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -102,6 +107,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     self.resultPageVC = [[ResultPageViewController alloc] initWithNibName:@"ResultPageViewController" bundle:nil];
     // Do any additional setup after loading the view from its nib.
     self.overlayPageVCFront = [[OverlayPageViewController alloc] initWithNibName:@"OverlayPageViewController" bundle:nil text:@"Front"];
@@ -144,6 +150,8 @@
         [self goToCameraFront:nil];
         openCamera =NO;
     }
+    [self.stepView = [StepView alloc]initWithFrame:CGRectMake(0, 0, 320, 20)];
+    [self.stepView initView:self.view andStep:1];
 }
 
 - (void)viewDidUnload

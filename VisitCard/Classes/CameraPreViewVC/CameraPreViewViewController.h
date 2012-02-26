@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "OverlayPageViewController.h"
 #import "ResultPageViewController.h"
+#import "StepView.h"
 
 @class MBProgressHUD;
 
@@ -43,6 +44,9 @@ namespace tesseract {
 
     //Loading
     UIActivityIndicatorView	*progress;
+    
+    //Step
+    StepView *stepView;
 
 }
 
@@ -66,6 +70,9 @@ namespace tesseract {
 @property (nonatomic, retain) IBOutlet UILabel *labelScaningCard;
 @property (nonatomic, retain) IBOutlet UILabel *labelScaningCardValue;
 @property (nonatomic, retain) IBOutlet UIButton *buttonScan;
+
+//Step
+@property (nonatomic,retain) StepView *stepView;
 
 //Tesseract
 - (void)setTesseractImage:(UIImage *)image;

@@ -21,6 +21,7 @@
 @synthesize imageViewBack,imageViewFront;
 @synthesize filterPageVC;
 @synthesize progress;
+@synthesize stepView;
 
 -(void)dealloc{
     [super dealloc];
@@ -37,6 +38,7 @@
     [imageBack release];
     
     [progress release];
+    [stepView release];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -62,7 +64,9 @@
 {
     [super viewDidLoad];
     [self.btHideKeypad setHidden:YES];
-    // Do any additional setup after loading the view from its nib.
+
+    [self.stepView = [StepView alloc]initWithFrame:CGRectMake(0, 0, 320, 20)];
+    [self.stepView initView:self.view andStep:2];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
