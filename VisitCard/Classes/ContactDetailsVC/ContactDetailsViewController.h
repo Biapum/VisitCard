@@ -30,6 +30,12 @@
     UIImageView *imageEdit4;
     ContactEntity *contactEnt;
     BOOL isEditingMode;
+    
+    //Loading
+    UIActivityIndicatorView	*progress1;
+    UIActivityIndicatorView	*progress2;
+    UILabel     *labelFront;
+    UILabel     *labelBack;
 }
 
 @property (nonatomic,retain) UIBarButtonItem        *buttonEdit;
@@ -49,5 +55,12 @@
 @property (nonatomic,retain) IBOutlet UIImageView   *imageEdit2;
 @property (nonatomic,retain) IBOutlet UIImageView   *imageEdit3;
 @property (nonatomic,retain) IBOutlet UIImageView   *imageEdit4;
+
+@property (nonatomic,retain) IBOutlet UIActivityIndicatorView	*progress1;
+@property (nonatomic,retain) IBOutlet UIActivityIndicatorView	*progress2;
+
+@property (nonatomic,retain) IBOutlet UILabel     *labelFront;
+@property (nonatomic,retain) IBOutlet UILabel     *labelBack;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil andContactId:(NSString *)contId;
 @end

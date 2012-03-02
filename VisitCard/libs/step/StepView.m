@@ -10,34 +10,37 @@
 
 @implementation StepView
 
-static int space =5;
+//static int space =5;
 
 -(void)initView:(UIView*)theView andStep:(int)step{
-    int totalPeace=(320-space*(3+1))/3;
+    double totalPeace=320/3;
 
-    CGRect c1= CGRectMake(space, space, totalPeace, 10);
-    CGRect c2= CGRectMake(totalPeace+space*2, space, totalPeace, 10);
-    CGRect c3= CGRectMake(totalPeace*2+space*3, space, totalPeace, 10);    
+    CGRect c1= CGRectMake(0, 0, totalPeace, 5);
+    CGRect c2= CGRectMake(totalPeace, 0, totalPeace, 5);
+    CGRect c3= CGRectMake(totalPeace*2, 0, totalPeace+2, 5);    
     
     UIView *view1 = [[[UIView alloc] initWithFrame:c1] autorelease];
     UIView *view2 = [[[UIView alloc] initWithFrame:c2] autorelease];
     UIView *view3 = [[[UIView alloc] initWithFrame:c3] autorelease];
+    
+    UIColor *green = [[UIColor alloc] initWithRed:0 green:.54 blue:.27 alpha:1];
+    UIColor *red = [[UIColor alloc] initWithRed:0.8 green:.2 blue:.2 alpha:1];
 
     switch (step) {
         case 1:
-            [view1 setBackgroundColor:[UIColor greenColor]];
-            [view2 setBackgroundColor:[UIColor redColor]];    
-            [view3 setBackgroundColor:[UIColor redColor]];                
+            [view1 setBackgroundColor:green];
+            [view2 setBackgroundColor:red];    
+            [view3 setBackgroundColor:red];                
             break;
         case 2:
-            [view1 setBackgroundColor:[UIColor greenColor]];
-            [view2 setBackgroundColor:[UIColor greenColor]];    
-            [view3 setBackgroundColor:[UIColor redColor]];                
+            [view1 setBackgroundColor:green];
+            [view2 setBackgroundColor:green];    
+            [view3 setBackgroundColor:red];                
             break;
         case 3:
-            [view1 setBackgroundColor:[UIColor greenColor]];
-            [view2 setBackgroundColor:[UIColor greenColor]];    
-            [view3 setBackgroundColor:[UIColor greenColor]];                
+            [view1 setBackgroundColor:green];
+            [view2 setBackgroundColor:green];    
+            [view3 setBackgroundColor:green];                
             break;
         default:
             break;
@@ -48,5 +51,7 @@ static int space =5;
     [self addSubview:view3];
     
     [theView addSubview:self];
+    [red release];
+    [green release];
 }
 @end

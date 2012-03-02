@@ -24,6 +24,8 @@
 @synthesize contactEnt;
 @synthesize contactCardFront,contactCardBack;
 @synthesize imageEdit0,imageEdit1,imageEdit2,imageEdit3,imageEdit4;
+@synthesize progress1,progress2;
+@synthesize labelBack, labelFront;
 
 -(void)dealloc{
     [super dealloc];
@@ -41,6 +43,10 @@
     [imageEdit2 release];
     [imageEdit3 release];
     [imageEdit4 release];
+    [progress1 release];
+    [progress2 release];
+    [labelBack release];
+    [labelFront release];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil andContactId:(NSString *)contId{
@@ -68,11 +74,26 @@
     [self setContactInfo];
     // Do any additional setup after loading the view from its nib.
     self.buttonEdit = [[UIBarButtonItem alloc] 
-                                   initWithTitle:@"Edit"                                            
-                                   style:UIBarButtonItemStylePlain
-                                   target:self 
-                                   action:@selector(pushEdit)];
+                       initWithTitle:@"Edit"                                            
+                       style:UIBarButtonItemStylePlain
+                       target:self 
+                       action:@selector(pushEdit)];
     self.navigationItem.rightBarButtonItem = buttonEdit;
+    
+    if(contactEnt.contactCardFrontData){
+        [self.progress1 setHidden:NO];
+        [self.labelFront setHidden:NO];
+    }else{
+        [self.progress1 setHidden:YES];
+        [self.labelFront setHidden:YES];
+    }
+    if(contactEnt.contactCardBackData){
+        [self.progress2 setHidden:NO];
+        [self.labelBack setHidden:NO];
+    }else{
+        [self.progress2 setHidden:YES];
+        [self.labelBack setHidden:YES];
+    }
 }
 
 -(void)setContactInfo{
@@ -128,6 +149,7 @@
         [self.imageEdit2 setHidden:YES];
         [self.imageEdit3 setHidden:YES];
         [self.imageEdit4 setHidden:YES];
+        [self.labelName setBackgroundColor:[UIColor clearColor]];
     }
     else{
         [self canEditButtons:YES];        
@@ -138,6 +160,7 @@
         [self.imageEdit2 setHidden:NO];
         [self.imageEdit3 setHidden:NO];
         [self.imageEdit4 setHidden:NO];
+        [self.labelName setBackgroundColor:[UIColor darkGrayColor]];
     }
 }
 

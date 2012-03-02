@@ -12,7 +12,4 @@
 
 -(void)initView:(UIView*)theView andStep:(int)step;
 
-@property (nonatomic, retain) UIView *generalView;
-
-
 @end

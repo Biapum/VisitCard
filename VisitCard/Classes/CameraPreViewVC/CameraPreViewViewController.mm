@@ -184,7 +184,8 @@
 -(void)goToResult{
     //[NSThread sleepForTimeInterval:2.2];
 
-    UIImage *image =[UIImage imageNamed:@"cardtext.png"];
+    //to test
+    //UIImage *image =[UIImage imageNamed:@"cardtext.png"];
     //[self.progressHud showWhileExecuting:@selector(processOcrAt:) onTarget:self withObject:[Utils convertImageToGrayScale:self.imageFront.image] animated:YES];
     if(self.imageFront.image)
         [self processOcrAt:[Utils convertImageToGrayScale:self.imageFront.image]];
