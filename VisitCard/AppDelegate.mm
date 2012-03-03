@@ -18,6 +18,7 @@
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
 @synthesize navContr,mainPageVC;
+@synthesize passCard;
 
 - (void)dealloc
 {
@@ -27,12 +28,14 @@
     [__managedObjectContext release];
     [__managedObjectModel release];
     [__persistentStoreCoordinator release];
+    [passCard release];
     
     [super dealloc];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [self initSound];
     [NSThread sleepForTimeInterval:1];
     [[FiltersServices instance] initArrays];
     [[DataServices instance] loadData];
@@ -199,6 +202,18 @@
 - (NSURL *)applicationDocumentsDirectory
 {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+}
+
+#pragma mark - sound
+
+-(void)initSound{
+    NSString *pathTap = [[NSBundle mainBundle] pathForResource:@"Select" ofType:@"caf"];
+    self.passCard = nil;
+
+    
+    self.passCard=[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:pathTap] error:NULL];  
+    [self.passCard play];
+    [self.passCard stop];
 }
 
 @end

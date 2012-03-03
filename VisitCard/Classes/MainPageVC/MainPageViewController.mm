@@ -8,9 +8,14 @@
 
 #import "MainPageViewController.h"
 #import "DataServices.h"
+#import "AppDelegate.h"
 
 #define NUMBER_OF_ITEMS ((UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)? 19: 12)
 #define ITEM_SPACING 210
+
+@interface MainPageViewController ()
+-(void)makeTheSoundPassCard;
+@end
 
 @implementation MainPageViewController
 @synthesize cameraPreViewVC,listPageVC,meVC;
@@ -139,9 +144,13 @@
 - (void)carouselCurrentItemIndexUpdated:(iCarousel *)carousel_{
     NSLog(@"%i,",carousel_.currentItemIndex);
     self.labelCurrentPoint.text = [NSString stringWithFormat:@"%i/%i",carousel_.currentItemIndex,carousel_.numberOfItems];
-    
+    [self performSelectorInBackground:@selector(makeTheSoundPassCard) withObject:nil];
 }
 
+-(void)makeTheSoundPassCard{
+    AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+    [delegate.passCard play];
+}
 
 #pragma mark -
 #pragma mark Button tap event

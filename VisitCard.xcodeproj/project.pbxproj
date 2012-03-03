@@ -19,6 +19,9 @@
 		CD5990D415022EEE003FAC1C /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = CD5990D215022EEE003FAC1C /* background.png */; };
 		CD5990D515022EEE003FAC1C /* page.png in Resources */ = {isa = PBXBuildFile; fileRef = CD5990D315022EEE003FAC1C /* page.png */; };
 		CD5990D71502302A003FAC1C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5990D61502302A003FAC1C /* QuartzCore.framework */; };
+		CD5990DD15026AD6003FAC1C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5990DC15026AD5003FAC1C /* AudioToolbox.framework */; };
+		CD5990E015026C2F003FAC1C /* Select.caf in Resources */ = {isa = PBXBuildFile; fileRef = CD5990DF15026C2F003FAC1C /* Select.caf */; };
+		CD5990E215026DC0003FAC1C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5990E115026DBF003FAC1C /* AVFoundation.framework */; };
 		CD63AB5514E68E6000805732 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD63AB5414E68E6000805732 /* UIKit.framework */; };
 		CD63AB5714E68E6000805732 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD63AB5614E68E6000805732 /* Foundation.framework */; };
 		CD63AB5914E68E6000805732 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD63AB5814E68E6000805732 /* CoreGraphics.framework */; };
@@ -92,6 +95,9 @@
 		CD5990D215022EEE003FAC1C /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		CD5990D315022EEE003FAC1C /* page.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page.png; sourceTree = "<group>"; };
 		CD5990D61502302A003FAC1C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CD5990DC15026AD5003FAC1C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		CD5990DF15026C2F003FAC1C /* Select.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Select.caf; sourceTree = "<group>"; };
+		CD5990E115026DBF003FAC1C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		CD63AB5014E68E6000805732 /* VisitCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisitCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD63AB5414E68E6000805732 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CD63AB5614E68E6000805732 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -206,6 +212,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD5990E215026DC0003FAC1C /* AVFoundation.framework in Frameworks */,
+				CD5990DD15026AD6003FAC1C /* AudioToolbox.framework in Frameworks */,
 				CD5990D71502302A003FAC1C /* QuartzCore.framework in Frameworks */,
 				CD63AB5514E68E6000805732 /* UIKit.framework in Frameworks */,
 				CD63AB5714E68E6000805732 /* Foundation.framework in Frameworks */,
@@ -329,6 +337,15 @@
 			path = Resources/images/DemoImages/iCarrusel;
 			sourceTree = "<group>";
 		};
+		CD5990DE15026C2F003FAC1C /* sound */ = {
+			isa = PBXGroup;
+			children = (
+				CD5990DF15026C2F003FAC1C /* Select.caf */,
+			);
+			name = sound;
+			path = Resources/sound;
+			sourceTree = "<group>";
+		};
 		CD63AB4514E68E6000805732 = {
 			isa = PBXGroup;
 			children = (
@@ -349,6 +366,8 @@
 		CD63AB5314E68E6000805732 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CD5990E115026DBF003FAC1C /* AVFoundation.framework */,
+				CD5990DC15026AD5003FAC1C /* AudioToolbox.framework */,
 				CD5990D61502302A003FAC1C /* QuartzCore.framework */,
 				CD63AB5414E68E6000805732 /* UIKit.framework */,
 				CD63AB5614E68E6000805732 /* Foundation.framework */,
@@ -425,6 +444,7 @@
 		CD63AB9A14E6C42D00805732 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CD5990DE15026C2F003FAC1C /* sound */,
 				CD63AB9B14E6C43C00805732 /* Images */,
 			);
 			name = Resources;
@@ -730,6 +750,7 @@
 				CD7294E414F99A40001A7977 /* StepView.xib in Resources */,
 				CD5990D415022EEE003FAC1C /* background.png in Resources */,
 				CD5990D515022EEE003FAC1C /* page.png in Resources */,
+				CD5990E015026C2F003FAC1C /* Select.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
