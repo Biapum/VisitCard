@@ -15,6 +15,10 @@
 		CD5759CA14E9DE6D001C361C /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD5759C614E9DE6D001C361C /* CustomCell.xib */; };
 		CD5759CB14E9DE6D001C361C /* CustomCell~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD5759C714E9DE6D001C361C /* CustomCell~ipad.xib */; };
 		CD5759CC14E9DE6D001C361C /* CustomCell.mm in Sources */ = {isa = PBXBuildFile; fileRef = CD5759C914E9DE6D001C361C /* CustomCell.mm */; };
+		CD5990D015022C82003FAC1C /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5990CF15022C82003FAC1C /* iCarousel.m */; };
+		CD5990D415022EEE003FAC1C /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = CD5990D215022EEE003FAC1C /* background.png */; };
+		CD5990D515022EEE003FAC1C /* page.png in Resources */ = {isa = PBXBuildFile; fileRef = CD5990D315022EEE003FAC1C /* page.png */; };
+		CD5990D71502302A003FAC1C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5990D61502302A003FAC1C /* QuartzCore.framework */; };
 		CD63AB5514E68E6000805732 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD63AB5414E68E6000805732 /* UIKit.framework */; };
 		CD63AB5714E68E6000805732 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD63AB5614E68E6000805732 /* Foundation.framework */; };
 		CD63AB5914E68E6000805732 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD63AB5814E68E6000805732 /* CoreGraphics.framework */; };
@@ -83,6 +87,11 @@
 		CD5759C714E9DE6D001C361C /* CustomCell~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "CustomCell~ipad.xib"; path = "Classes/ListPageVC/CustomCell/CustomCell~ipad.xib"; sourceTree = "<group>"; };
 		CD5759C814E9DE6D001C361C /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomCell.h; path = Classes/ListPageVC/CustomCell/CustomCell.h; sourceTree = "<group>"; };
 		CD5759C914E9DE6D001C361C /* CustomCell.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CustomCell.mm; path = Classes/ListPageVC/CustomCell/CustomCell.mm; sourceTree = "<group>"; };
+		CD5990CE15022C82003FAC1C /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		CD5990CF15022C82003FAC1C /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		CD5990D215022EEE003FAC1C /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		CD5990D315022EEE003FAC1C /* page.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page.png; sourceTree = "<group>"; };
+		CD5990D61502302A003FAC1C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CD63AB5014E68E6000805732 /* VisitCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisitCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD63AB5414E68E6000805732 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CD63AB5614E68E6000805732 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -197,6 +206,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD5990D71502302A003FAC1C /* QuartzCore.framework in Frameworks */,
 				CD63AB5514E68E6000805732 /* UIKit.framework in Frameworks */,
 				CD63AB5714E68E6000805732 /* Foundation.framework in Frameworks */,
 				CD63AB5914E68E6000805732 /* CoreGraphics.framework in Frameworks */,
@@ -299,6 +309,26 @@
 			name = CustomCell;
 			sourceTree = "<group>";
 		};
+		CD5990CD15022C82003FAC1C /* iCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				CD5990CE15022C82003FAC1C /* iCarousel.h */,
+				CD5990CF15022C82003FAC1C /* iCarousel.m */,
+			);
+			name = iCarousel;
+			path = libs/iCarousel;
+			sourceTree = "<group>";
+		};
+		CD5990D115022EEE003FAC1C /* iCarrusel */ = {
+			isa = PBXGroup;
+			children = (
+				CD5990D215022EEE003FAC1C /* background.png */,
+				CD5990D315022EEE003FAC1C /* page.png */,
+			);
+			name = iCarrusel;
+			path = Resources/images/DemoImages/iCarrusel;
+			sourceTree = "<group>";
+		};
 		CD63AB4514E68E6000805732 = {
 			isa = PBXGroup;
 			children = (
@@ -319,6 +349,7 @@
 		CD63AB5314E68E6000805732 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CD5990D61502302A003FAC1C /* QuartzCore.framework */,
 				CD63AB5414E68E6000805732 /* UIKit.framework */,
 				CD63AB5614E68E6000805732 /* Foundation.framework */,
 				CD63AB5814E68E6000805732 /* CoreGraphics.framework */,
@@ -410,6 +441,7 @@
 		CD63AB9C14E6C44300805732 /* demoImages */ = {
 			isa = PBXGroup;
 			children = (
+				CD5990D115022EEE003FAC1C /* iCarrusel */,
 				CD93E9CC14F8714200D82FF5 /* Camera */,
 				CD7294DC14F93B26001A7977 /* buttonEdit.png */,
 				CD93E9B914F8510500D82FF5 /* buttonWhite.png */,
@@ -465,6 +497,7 @@
 		CD69E34014F8EFF500716809 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				CD5990CD15022C82003FAC1C /* iCarousel */,
 				CD7294DE14F9996C001A7977 /* step */,
 				CD69E37414F8F07600716809 /* MBProgressHUD */,
 				CD69E34214F8F00600716809 /* Tesseract */,
@@ -695,6 +728,8 @@
 				CD7294C814F90BF3001A7977 /* tessdata in Resources */,
 				CD7294DD14F93B26001A7977 /* buttonEdit.png in Resources */,
 				CD7294E414F99A40001A7977 /* StepView.xib in Resources */,
+				CD5990D415022EEE003FAC1C /* background.png in Resources */,
+				CD5990D515022EEE003FAC1C /* page.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -723,6 +758,7 @@
 				CD69E37714F8F07600716809 /* MBProgressHUD.m in Sources */,
 				CD7294D714F914D6001A7977 /* Utils.m in Sources */,
 				CD7294E114F999A0001A7977 /* StepView.m in Sources */,
+				CD5990D015022C82003FAC1C /* iCarousel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -759,7 +795,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -776,7 +812,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -789,6 +825,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VisitCard/VisitCard-Prefix.pch";
 				INFOPLIST_FILE = "VisitCard/VisitCard-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/VisitCard/libs/build_dependencies/dependencies/lib\"",
@@ -805,6 +842,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VisitCard/VisitCard-Prefix.pch";
 				INFOPLIST_FILE = "VisitCard/VisitCard-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/VisitCard/libs/build_dependencies/dependencies/lib\"",

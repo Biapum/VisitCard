@@ -36,7 +36,7 @@
     [imageViewFront release];
     [imageFront release];
     [imageBack release];
-    
+    [filterPageVC release];
     [progress release];
     [stepView release];
 }
@@ -146,7 +146,7 @@
     if(imageBack)
         [dic setObject:UIImagePNGRepresentation(self.imageBack) forKey:@"cardBackData"];
     
-    self.filterPageVC = [[[FiltersPageViewController alloc]initWithNibName:@"FiltersPageViewController" bundle:nil dic:dic] autorelease];
+    self.filterPageVC = [[FiltersPageViewController alloc]initWithNibName:@"FiltersPageViewController" bundle:nil dic:dic];
     [self.navigationController pushViewController:self.filterPageVC animated:YES];
     [dic release];
 

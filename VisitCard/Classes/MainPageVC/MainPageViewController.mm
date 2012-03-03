@@ -3,19 +3,32 @@
 //  VisitCard
 //
 //  Created by Valentí on 11/02/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Biapum. All rights reserved.
 //
 
 #import "MainPageViewController.h"
+#import "DataServices.h"
+
+#define NUMBER_OF_ITEMS ((UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)? 19: 12)
+#define ITEM_SPACING 210
 
 @implementation MainPageViewController
 @synthesize cameraPreViewVC,listPageVC,meVC;
+@synthesize labelCurrentPoint;
+@synthesize carousel;
+@synthesize arrayCards;
 
 -(void)dealloc{
     [super dealloc];
     [cameraPreViewVC release];
     [listPageVC release];
     [meVC release];
+    [labelCurrentPoint release];
+    [arrayCards release];
+    
+    carousel.delegate = nil;
+    carousel.dataSource = nil;
+    [carousel release];
 }
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,10 +41,7 @@
 
 - (void)didReceiveMemoryWarning
 {
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
+    [super didReceiveMemoryWarning];    
 }
 
 #pragma mark - View lifecycle
@@ -42,25 +52,29 @@
     cameraPreViewVC = [[CameraPreViewViewController alloc]init];
     listPageVC = [[ListPageViewController alloc]init];
     meVC= [[MeViewController alloc]init];
-    // Do any additional setup after loading the view from its nib.
+
+    //configure carousel
+    carousel.type = iCarouselTypeWheel;
+    self.arrayCards = [[NSMutableArray alloc] init];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
     [self.navigationController.navigationBar setHidden:YES];
+    self.arrayCards = [[DataServices instance] getTheArrayContacts];
+    [self.carousel reloadData];
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+    self.carousel = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    return YES;//for supported orientations
+    //return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 #pragma mark - actions
@@ -79,4 +93,69 @@
     [self.navigationController pushViewController:meVC animated:YES];
     
 }
+
+#pragma mark -
+#pragma mark iCarousel methods
+
+- (NSUInteger)numberOfItemsInCarousel:(iCarousel *)carousel
+{
+   // return [self.arrayCards count];
+    return NUMBER_OF_ITEMS;
+}
+
+- (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSUInteger)index reusingView:(UIView *)view
+{ 
+	UIButton *button = (UIButton *)view;
+	if (button == nil)
+	{
+		//no button available to recycle, so create new one
+		UIImage *image = [UIImage imageNamed:@"page.png"];
+		button = [UIButton buttonWithType:UIButtonTypeCustom];
+		button.frame = CGRectMake(0.0f, 0.0f, image.size.width, image.size.height);
+		[button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+		[button setBackgroundImage:image forState:UIControlStateNormal];
+		button.titleLabel.font = [button.titleLabel.font fontWithSize:50];
+		[button addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
+	}
+	
+	//set button label
+	[button setTitle:[NSString stringWithFormat:@"%i", index] forState:UIControlStateNormal];
+    
+	
+	return button;
+}
+
+- (CGFloat)carouselItemWidth:(iCarousel *)carousel
+{
+    return ITEM_SPACING;
+}
+
+- (void)carouselDidScroll:(iCarousel *)carousel_{
+//    NSInteger index = [carousel indexOfItemView:carousel];
+
+
+}
+
+- (void)carouselCurrentItemIndexUpdated:(iCarousel *)carousel_{
+    NSLog(@"%i,",carousel_.currentItemIndex);
+    self.labelCurrentPoint.text = [NSString stringWithFormat:@"%i/%i",carousel_.currentItemIndex,carousel_.numberOfItems];
+    
+}
+
+
+#pragma mark -
+#pragma mark Button tap event
+
+- (void)buttonTapped:(UIButton *)sender
+{
+	//get item index for button
+	NSInteger index = [carousel indexOfItemView:sender];
+	
+    [[[[UIAlertView alloc] initWithTitle:@"Card tapped"
+                                 message:[NSString stringWithFormat:@"You tapped tap with id %i", index]
+                                delegate:nil
+                       cancelButtonTitle:@"OK"
+                       otherButtonTitles:nil] autorelease] show];
+}
+
 @end
