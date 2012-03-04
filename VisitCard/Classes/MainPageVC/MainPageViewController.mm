@@ -9,12 +9,16 @@
 #import "MainPageViewController.h"
 #import "DataServices.h"
 #import "AppDelegate.h"
+#import "ContactEntity.h"
+#import "ContactDetailsViewController.h"
 
 #define NUMBER_OF_ITEMS ((UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)? 19: 12)
 #define ITEM_SPACING 210
 
 @interface MainPageViewController ()
--(void)makeTheSoundPassCard;
+- (void)makeTheSoundPassCard;
+- (void)slideView:(CGFloat)distance;
+- (void)setSegmentedControlButtons;
 @end
 
 @implementation MainPageViewController
@@ -22,6 +26,11 @@
 @synthesize labelCurrentPoint;
 @synthesize carousel;
 @synthesize arrayCards;
+@synthesize viewOrder,segmentedControl;
+
+//cardView
+@synthesize cardLabelName;
+@synthesize cardButtonRemove,cardButtonMoreInfo;
 
 -(void)dealloc{
     [super dealloc];
@@ -29,7 +38,14 @@
     [listPageVC release];
     [meVC release];
     [labelCurrentPoint release];
-    [arrayCards release];
+    
+    //CARDVIEW
+    [cardLabelName release];
+    [cardButtonRemove release];
+    [cardButtonMoreInfo release];
+    
+    [viewOrder release];
+    [segmentedControl release];
     
     carousel.delegate = nil;
     carousel.dataSource = nil;
@@ -60,7 +76,7 @@
 
     //configure carousel
     carousel.type = iCarouselTypeWheel;
-    self.arrayCards = [[NSMutableArray alloc] init];
+    //self.arrayCards = [[NSMutableArray alloc] init];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -99,35 +115,59 @@
     
 }
 
+-(IBAction)pushMoreButoon:(id)sender{
+    NSInteger index = carousel.currentItemIndex;
+    
+    ContactEntity *contact =[self.arrayCards objectAtIndex:index];
+    
+    ContactDetailsViewController *contactDetailVC = [[ContactDetailsViewController alloc] initWithNibName:@"ContactDetailsViewController" bundle:nil andContactId:@"proba"];
+    contactDetailVC.contactId = contact.contactId;
+    
+    [self.navigationController pushViewController:contactDetailVC animated:YES];
+	[contactDetailVC release];
+}
+
+- (IBAction)removeCard:(id)sender
+{
+    if (carousel.numberOfItems > 0)
+    {
+//        NSInteger index = carousel.currentItemIndex;
+//        [carousel removeItemAtIndex:index animated:YES];
+//        ContactEntity *c = [self.arrayCards objectAtIndex:index];
+//        NSLog(@"push string %@",c.contactId);
+//        NSString *contactId =c.contactId;
+//        [[DataServices instance] removeContact:contactId];
+//        //[self.arrayCards removeObjectAtIndex:index];
+//        [self.carousel reloadData];
+    }
+}
+
+-(IBAction) segmentedControlIndexChanged{
+    
+    [self setSegmentedControlButtons];
+}
+
 #pragma mark -
 #pragma mark iCarousel methods
 
 - (NSUInteger)numberOfItemsInCarousel:(iCarousel *)carousel
 {
-   // return [self.arrayCards count];
-    return NUMBER_OF_ITEMS;
+    return [self.arrayCards count];
+   // return NUMBER_OF_ITEMS;
 }
 
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSUInteger)index reusingView:(UIView *)view
 { 
-	UIButton *button = (UIButton *)view;
-	if (button == nil)
-	{
-		//no button available to recycle, so create new one
-		UIImage *image = [UIImage imageNamed:@"page.png"];
-		button = [UIButton buttonWithType:UIButtonTypeCustom];
-		button.frame = CGRectMake(0.0f, 0.0f, image.size.width, image.size.height);
-		[button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-		[button setBackgroundImage:image forState:UIControlStateNormal];
-		button.titleLabel.font = [button.titleLabel.font fontWithSize:50];
-		[button addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
-	}
-	
-	//set button label
-	[button setTitle:[NSString stringWithFormat:@"%i", index] forState:UIControlStateNormal];
-    
-	
-	return button;
+    if (!view)
+    {
+    	//load new item view instance from nib
+        //control events are bound to view controller in nib file
+    	view = [[[NSBundle mainBundle] loadNibNamed:@"ItemView" owner:self options:nil] lastObject];
+        ContactEntity *c = [self.arrayCards objectAtIndex:index];
+
+        self.cardLabelName.text = [NSString stringWithFormat:@"%@", c.contactName];
+    }
+    return view;
 }
 
 - (CGFloat)carouselItemWidth:(iCarousel *)carousel
@@ -165,6 +205,47 @@
                                 delegate:nil
                        cancelButtonTitle:@"OK"
                        otherButtonTitles:nil] autorelease] show];
+}
+
+#pragma mark - order view animation
+
+- (IBAction)pushOpenOrderView:(id)sender{
+    [self slideView:0];
+}
+
+- (IBAction)pushCloseOrderView:(id)sender{
+    if (UIDeviceOrientationIsPortrait([UIDevice currentDevice].orientation))
+    {
+        [self slideView:-320];
+    }else{
+        [self slideView:-480];
+    }
+}
+
+- (void)slideView:(CGFloat)distance{
+
+    [UIView animateWithDuration:.5
+                     animations:^{
+                         CGRect vFrame = [viewOrder frame];
+                         vFrame.origin.x =distance;
+                         [viewOrder setFrame:vFrame];
+                     }];
+
+}
+
+#pragma mark - segmentedControl
+
+-(void)setSegmentedControlButtons{
+	switch (self.segmentedControl.selectedSegmentIndex) {
+		case 0:
+            NSLog(@"push 0");
+            break;			
+		case 1:
+            NSLog(@"push 1");
+     		break;
+    	default:
+			break;
+	}
 }
 
 @end

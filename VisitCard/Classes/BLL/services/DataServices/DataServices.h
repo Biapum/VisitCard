@@ -23,6 +23,7 @@
 -(NSString*)getCurrentId;
 
 -(void)addContact:(ContactEntity *)contact;
+-(void)removeContact:(NSString *)contactId;
 -(void)loadData;
 -(void)saveData;
 

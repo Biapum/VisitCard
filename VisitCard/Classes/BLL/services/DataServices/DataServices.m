@@ -65,6 +65,23 @@ static DataServices *myInstance = nil;
     [self.arrayContacts addObject:contact];
 }
 
+-(void)removeContact:(NSString *)contactId{
+//    NSLog(@"----%@",contactId);
+//    NSLog(@"----%i",[arrayContacts count]);
+//    for (int i; i< [arrayContacts count];i++){
+//        ContactEntity *c = [arrayContacts objectAtIndex:i];
+//        if([contactId isEqualToString:c.contactId]){
+//            if ( [arrayContacts isKindOfClass: [NSMutableArray class]] )
+//            {
+//                [arrayContacts removeObjectAtIndex:i];
+//                return;
+//            }
+//            
+//        }
+//    }
+}
+
+
 #pragma mark - gets
 
 -(NSString*)getCurrentId{

@@ -22,6 +22,7 @@
 		CD5990DD15026AD6003FAC1C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5990DC15026AD5003FAC1C /* AudioToolbox.framework */; };
 		CD5990E015026C2F003FAC1C /* Select.caf in Resources */ = {isa = PBXBuildFile; fileRef = CD5990DF15026C2F003FAC1C /* Select.caf */; };
 		CD5990E215026DC0003FAC1C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5990E115026DBF003FAC1C /* AVFoundation.framework */; };
+		CD5990E915027502003FAC1C /* ItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD5990E815027502003FAC1C /* ItemView.xib */; };
 		CD63AB5514E68E6000805732 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD63AB5414E68E6000805732 /* UIKit.framework */; };
 		CD63AB5714E68E6000805732 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD63AB5614E68E6000805732 /* Foundation.framework */; };
 		CD63AB5914E68E6000805732 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD63AB5814E68E6000805732 /* CoreGraphics.framework */; };
@@ -74,6 +75,7 @@
 		CD93E9DE14F8749D00D82FF5 /* buttonTwitter.png in Resources */ = {isa = PBXBuildFile; fileRef = CD93E9DA14F8749B00D82FF5 /* buttonTwitter.png */; };
 		CD93E9DF14F8749D00D82FF5 /* buttonMail.png in Resources */ = {isa = PBXBuildFile; fileRef = CD93E9DB14F8749B00D82FF5 /* buttonMail.png */; };
 		CD93E9E014F8749D00D82FF5 /* buttonPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = CD93E9DC14F8749C00D82FF5 /* buttonPhone.png */; };
+		CDE2CE6B1502C64B00E8B67C /* plus-button.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE2CE6A1502C64B00E8B67C /* plus-button.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +100,7 @@
 		CD5990DC15026AD5003FAC1C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		CD5990DF15026C2F003FAC1C /* Select.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Select.caf; sourceTree = "<group>"; };
 		CD5990E115026DBF003FAC1C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		CD5990E815027502003FAC1C /* ItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ItemView.xib; path = Classes/MainPageVC/CardView/ItemView.xib; sourceTree = "<group>"; };
 		CD63AB5014E68E6000805732 /* VisitCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisitCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD63AB5414E68E6000805732 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CD63AB5614E68E6000805732 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -205,6 +208,7 @@
 		CD93E9DA14F8749B00D82FF5 /* buttonTwitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonTwitter.png; path = Resources/images/DemoImages/buttonTwitter.png; sourceTree = "<group>"; };
 		CD93E9DB14F8749B00D82FF5 /* buttonMail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonMail.png; path = Resources/images/DemoImages/buttonMail.png; sourceTree = "<group>"; };
 		CD93E9DC14F8749C00D82FF5 /* buttonPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonPhone.png; path = Resources/images/DemoImages/buttonPhone.png; sourceTree = "<group>"; };
+		CDE2CE6A1502C64B00E8B67C /* plus-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plus-button.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -330,6 +334,7 @@
 		CD5990D115022EEE003FAC1C /* iCarrusel */ = {
 			isa = PBXGroup;
 			children = (
+				CDE2CE6A1502C64B00E8B67C /* plus-button.png */,
 				CD5990D215022EEE003FAC1C /* background.png */,
 				CD5990D315022EEE003FAC1C /* page.png */,
 			);
@@ -344,6 +349,14 @@
 			);
 			name = sound;
 			path = Resources/sound;
+			sourceTree = "<group>";
+		};
+		CD5990E3150272D9003FAC1C /* CardView */ = {
+			isa = PBXGroup;
+			children = (
+				CD5990E815027502003FAC1C /* ItemView.xib */,
+			);
+			name = CardView;
 			sourceTree = "<group>";
 		};
 		CD63AB4514E68E6000805732 = {
@@ -413,6 +426,7 @@
 		CD63AB7114E68E9D00805732 /* MainPageVC */ = {
 			isa = PBXGroup;
 			children = (
+				CD5990E3150272D9003FAC1C /* CardView */,
 				CD63AB7214E68EC900805732 /* MainPageViewController.h */,
 				CD63AB7314E68EC900805732 /* MainPageViewController.mm */,
 				CD63AB7414E68EC900805732 /* MainPageViewController.xib */,
@@ -751,6 +765,8 @@
 				CD5990D415022EEE003FAC1C /* background.png in Resources */,
 				CD5990D515022EEE003FAC1C /* page.png in Resources */,
 				CD5990E015026C2F003FAC1C /* Select.caf in Resources */,
+				CD5990E915027502003FAC1C /* ItemView.xib in Resources */,
+				CDE2CE6B1502C64B00E8B67C /* plus-button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

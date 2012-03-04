@@ -116,8 +116,10 @@
     [super viewWillAppear:animated];
     isEditingMode = NO;
     [self canEditButtons:NO];
-
+    [self.navigationController.navigationBar setHidden:NO];
+    [self.navigationController.navigationBar setTintColor:[UIColor blackColor]];
 }
+
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     [self performSelectorInBackground:@selector(initImages) withObject:nil];
@@ -150,6 +152,7 @@
         [self.imageEdit3 setHidden:YES];
         [self.imageEdit4 setHidden:YES];
         [self.labelName setBackgroundColor:[UIColor clearColor]];
+        [self.labelPhone setBackgroundColor:[UIColor clearColor]];
     }
     else{
         [self canEditButtons:YES];        
@@ -161,6 +164,7 @@
         [self.imageEdit3 setHidden:NO];
         [self.imageEdit4 setHidden:NO];
         [self.labelName setBackgroundColor:[UIColor darkGrayColor]];
+        [self.labelPhone setBackgroundColor:[UIColor darkGrayColor]];
     }
 }
 
